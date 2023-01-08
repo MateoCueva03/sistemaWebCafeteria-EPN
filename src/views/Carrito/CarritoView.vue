@@ -18,7 +18,6 @@
       <h4>El carrito esta vacío</h4>
     </v-row>
     <ErrorSnackbar />
-     
   </div>
 </template>
 

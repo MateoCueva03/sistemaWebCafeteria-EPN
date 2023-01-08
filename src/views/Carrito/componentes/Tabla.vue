@@ -26,17 +26,6 @@
        
 
     </v-data-table>
-    <v-card>
-      <v-btn 
-        style="margin-left: 5px; margin-bottom: 5px;"
-        min-width
-        :loading = "cargando"
-        to="/comidas"
-        color="success">
-        Regresar
-      </v-btn>
-  
-        </v-card>
   </div>
 </template>
 

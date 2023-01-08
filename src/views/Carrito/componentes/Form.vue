@@ -23,10 +23,19 @@
         </v-col>
       </v-row>
     </v-card-text>
-    <v-card-actions>
+    <v-card-actions align="center"
+    justify="space-around">
+      <v-btn 
+        large
+        :loading = "cargando"
+        to="/comidas"
+        color="success">
+        Regresar
+      </v-btn>
+  
       <v-btn 
         :loading = "cargando"
-        block
+        large
         @click="procesar()"
         :disabled ="comprobante == null || cargando"
         color="warning">
