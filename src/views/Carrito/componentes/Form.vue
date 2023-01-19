@@ -27,7 +27,6 @@
     justify="space-around">
       <v-btn 
         large
-        :loading = "cargando"
         to="/comidas"
         color="success">
         Regresar

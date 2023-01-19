@@ -42,7 +42,7 @@
 
           <v-select
             v-model="platoActual.tipo"
-            :items="['caldo','segundo','bebida','extra']"
+            :items="['sopa','segundo','bebida','extra']"
             label="Tipo"
           ></v-select>
 

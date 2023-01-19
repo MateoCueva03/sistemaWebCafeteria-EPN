@@ -29,13 +29,27 @@
         link
         :to="item.path"
       >
+
         <v-list-item-icon>
-          <v-badge left color="primary" v-if="usuario.rol == 'cocinero' && item.titulo == 'Pedidos'">
+           <!-- Pedidos pendientes admin -->
+          <v-badge left color="error" v-if="usuario.rol == 'administrador' && item.titulo == 'Pedidos'">
+            <span slot="badge">{{pedidosPendientes.length}}</span>
+          </v-badge>
+
+        
+
+          <!-- Pedidos pendientes cocinero -->
+          <v-badge left color="error" v-if="usuario.rol == 'cocinero' && item.titulo == 'Pedidos'">
             <span slot="badge">{{pedidosVerificados.length}}</span>
-            <v-icon large color="primary">{{ item.icono }}</v-icon>
+            <v-icon color="white">{{ item.icono }}</v-icon>
           </v-badge>
           <v-icon v-else style="color: white;">{{ item.icono }}</v-icon>
+
+
+       
         </v-list-item-icon>
+
+
 
         <v-list-item-content>
           <v-list-item-title style="color: white;">{{ item.titulo }}</v-list-item-title>
@@ -99,6 +113,12 @@ export default Vue.extend({
           path:'/comidas',
           roles:['cliente']
         },
+        {
+          titulo:'Reporte de pedidos',
+          icono: 'mdi-file-chart',
+          path:'/reporte',
+          roles:['administrador']
+        },
       ]
     }
   },
@@ -120,6 +140,8 @@ export default Vue.extend({
   computed:{
     ...mapGetters('moduloUsuario',['usuario']),
     ...mapGetters('moduloPedido',['pedidosVerificados']),
+    ...mapGetters('moduloPedido',['pedidosPendientes']),
+
   },
   async mounted(){
     await this.cargarPedidos();

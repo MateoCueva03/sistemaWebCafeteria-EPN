@@ -98,6 +98,15 @@ const routes: Array<RouteConfig> = [
     name: 'recuperar-password',
     component: ()=> import('@/views/RecuperarPassword/RecuperarPasswordView.vue'),
   },
+  {
+    path: '/reporte',
+    name: 'Reporte',
+    component: ()=> import('@/views/Reporte/ReporteView.vue'),
+    meta:{
+      rutaProtegida: true
+    }
+  },
+
 ];
 
 const router = new VueRouter({

@@ -238,7 +238,7 @@ export default Vue.extend({
       await this.cargarPedidos();
       this.cargando = false;
     },
-    async completar(item:any){
+    async  completar(item:any){
       this.cargando = true;
       await this.actualizarEstado({id: item._id, estado:'completado'});
       await this.cargarPedidos();
