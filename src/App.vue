@@ -22,7 +22,7 @@ import NavigationDrawer from "./components/NavigationDrawer.vue";
 
 export default Vue.extend({
   components: { Navbar, NavigationDrawer },
-  name: "App",
+  name: "Cafeteria EPN",
 
   data: () => {
     return {

@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import HomeView from "../views/Home/HomeView.vue";
+import HomeView from "@/views/Home/HomeView.vue";
 
 
 Vue.use(VueRouter);
@@ -14,12 +14,12 @@ const routes: Array<RouteConfig> = [
   {
     path: '/login',
     name: 'login',
-    component: () => import('../views/Login/LoginView.vue')
+    component: () => import('@/views/Login/LoginView.vue')
   },
   {
     path: '/registro',
     name: 'registro',
-    component: () => import('../views/Registro/RegistroView.vue')
+    component: () => import('@/views/Registro/RegistroView.vue')
   },
   {
     path: '/dashboard',
