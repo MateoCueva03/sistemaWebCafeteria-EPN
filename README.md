@@ -10,7 +10,7 @@
 </h1>
 <br>
 
-<p align="center"><b>Elaborado por:</b>Mateo Nicolas Cueva Ramos/p>
+<p align="center"><b>Elaborado por:</b> Mateo Nicolas Cueva Ramos</p>
 <p align="center"><b>2022-2023</b></p>
 <br>
 
