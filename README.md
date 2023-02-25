@@ -23,6 +23,9 @@
       <a href="#sobre-el-proyecto">Sobre el proyecto</a>
     </li>
     <li>
+      <a href="#descarga-e-instalacion-del-proyecto">Descarga e instalación del proyecto</a>
+    </li>
+    <li>
       <a href="#perfiles-de-usuario">Perfiles de usuario</a>
       <ul>
         <li><a href="#funcionalidades-del-usuario-administrador">Funcionalidades del usuario administrador</a></li>
@@ -45,6 +48,22 @@
 
 El presente proyecto contiene el desarrollo de un Sistema Web para comandas en la Cafeteria EPN, en donde se implementó las vistas y los modulos para la correcta iteracción y dar una buena experiencia al usuario final.
 <br>
+
+# Descarga e instalación del proyecto
+
+1. Para la instalación del proyecto debemos descargar el archivo .zip, desde el repositorio
+<br>
+
+2. Una ves descargado el proyecto, los descoprimimos y desde la carpeta del proyecto ejecutamos el CMD, para abrir el editor de codigo 'Visual Studio Code'
+<br>
+
+3. Para ejecutar el proyecto de manera local se debe ejecutar el siguiente comando:
+
+```
+npm start
+```
+4. Bien echo ya tendras el proyecto ejecutandose y funcionando correctamente.
+
 
 # Perfiles de usuario
 
