@@ -6,7 +6,9 @@
  </p>
 <br>
 <h1 align="center">
-    DESARROLLO DE SISTEMA WEB Y APLICACIÓN MÓVIL PARA COMANDAS EN LA CAFETERÍA EPN<br><br>Desarrollo de un Frontend
+    DESARROLLO DE SISTEMA WEB Y APLICACIÓN MÓVIL PARA COMANDAS EN LA CAFETERÍA EPN<br>
+    <br>
+    Desarrollo de un Frontend
 </h1>
 <br>
 
@@ -23,7 +25,7 @@
       <a href="#sobre-el-proyecto">Sobre el proyecto</a>
     </li>
     <li>
-      <a href="#descarga-e-instalacion-del-proyecto">Descarga e instalación del proyecto</a>
+      <a href="#descarga-e-instalación-del-proyecto">Descarga e instalación del proyecto</a>
     </li>
     <li>
       <a href="#perfiles-de-usuario">Perfiles de usuario</a>
