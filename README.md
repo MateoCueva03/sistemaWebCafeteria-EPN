@@ -53,31 +53,31 @@ El presente proyecto contiene el desarrollo de un Sistema Web para comandas en l
 
 # Descarga e instalación del proyecto
 
-1. Para la instalación del proyecto debemos descargar el archivo .zip, desde el repositorio
+ 1. Para la instalación del proyecto debemos descargar el archivo .zip, desde el repositorio
 
-2. Una ves descargado el proyecto, los descoprimimos y desde la carpeta del proyecto ejecutamos el CMD, para abrir el editor de codigo 'Visual Studio Code'
+ 2. Una ves descargado el proyecto, los descoprimimos y desde la carpeta del proyecto ejecutamos el CMD, para abrir el editor de codigo 'Visual Studio Code'
 
-3. El siguiente paso es abrir la terminal desde el editor de codigo y ejecutamos:
+ 3. El siguiente paso es abrir la terminal desde el editor de codigo y ejecutamos:
 
-```
-npm install
-```
+    ```
+    npm install
+    ```
 
-4.Para ejecutar el proyecto de manera local se debe ejecutar el siguiente comando:
+  4. Para ejecutar el proyecto de manera local se debe ejecutar el siguiente comando:
 
-```
-npm start
-```
+     ```
+     npm start
+     ```
 
-5. Bien echo, ahora tienes el proyecto ejecutandose y funcionando correctamente.
+   5. Bien echo, ahora tienes el proyecto ejecutandose y funcionando correctamente.
 
-<br>
-<p align="center">
-    <a>
-        <img src="https://user-images.githubusercontent.com/74993888/221335207-2bdb2242-fe26-4ddd-8aa7-532bfb61390e.png" alt="Logo" width="700" height="400">
-    </a>
- </p>
-<br>
+        <br>
+        <p align="center">
+            <a>
+                <img src="https://user-images.githubusercontent.com/74993888/221335207-2bdb2242-fe26-4ddd-8aa7-532bfb61390e.png" alt="Logo" width="700" height="400">
+            </a>
+         </p>
+        <br>
 
 # Perfiles de usuario
 
