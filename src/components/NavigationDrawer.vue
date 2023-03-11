@@ -9,8 +9,12 @@
       <v-list-item-avatar>
         <v-img :src="traerFoto()"></v-img>
       </v-list-item-avatar>
-
-      <v-list-item-title style="color: white;">{{usuario.nombre}}</v-list-item-title>
+  
+      <v-list dense>
+      <v-list-item-title style="color: white;">{{usuario.nombre}}</v-list-item-title> 
+      <v-list-item-title style="color: white; font-size: x-small;">{{usuario.rol}}</v-list-item-title> 
+      </v-list>
+      <v-divider horizontal></v-divider>
 
       <v-btn
         icon
@@ -20,7 +24,6 @@
       </v-btn>
     </v-list-item>
 
-    <v-divider></v-divider>
 
     <v-list dense>
       <v-list-item
