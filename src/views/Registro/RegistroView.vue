@@ -16,7 +16,7 @@
                 label="Nombre"
                 v-model="usuario.nombre"
                 :rules="rules.nombreRules"
-                required
+               required
               ></v-text-field>
 
               <v-text-field
@@ -67,7 +67,6 @@
               ></v-text-field>
 
               <v-btn 
-                on:click="sweetAlert"
                 class="white--text" 
                 large block rounded 
                 type="submit"
@@ -137,23 +136,14 @@ export default Vue.extend({
     }
   },
   methods:{
-    sweetAlert() {
-      this.$swal({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Your work has been saved',
-      showConfirmButton: false,
-      timer: 1500
-     })
-        },
     ...mapActions('moduloUsuario',['registrar']),
     ...mapActions('moduloError',['restablecerError']),
     async procesar(){
       this.cargando = true;
       await this.registrar(this.usuario);
       this.cargando = false;
-      },
-   
+      
+    },   
     obtenerArchivo(archivo:File | null){
       this.usuario.foto = archivo as any;
     },
