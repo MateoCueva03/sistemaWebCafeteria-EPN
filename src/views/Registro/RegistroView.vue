@@ -16,7 +16,7 @@
                 label="Nombre"
                 v-model="usuario.nombre"
                 :rules="rules.nombreRules"
-e                required
+                required
               ></v-text-field>
 
               <v-text-field
