@@ -152,14 +152,7 @@ export default Vue.extend({
       this.cargando = true;
       await this.registrar(this.usuario);
       this.cargando = false;
-      this.$swal({
-  position: 'top-end',
-  icon: 'success',
-  title: 'Your work has been saved',
-  showConfirmButton: false,
-  timer: 1500
-})
-    },
+      },
    
     obtenerArchivo(archivo:File | null){
       this.usuario.foto = archivo as any;
