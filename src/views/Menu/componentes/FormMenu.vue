@@ -97,7 +97,9 @@ export default Vue.extend({
       cargando: false,
       datosValidos: false,
       rules:{
-        titulo: [(v:string) => !!v || 'El título es requerido'],
+        titulo: [(v:string) => !!v || 'El título es requerido',
+        (v:string) => v.length <= 35 || 'Solo se permiten 35 caracteres' 
+        ],
         platos: [
           (v:[]) => v.length > 0 || 'Debe escojer platos',
         ],
@@ -144,3 +146,4 @@ export default Vue.extend({
   }
 })
 </script>
+
