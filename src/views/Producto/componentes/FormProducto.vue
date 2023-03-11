@@ -77,11 +77,14 @@ export default Vue.extend({
         nombre: [(v:string) => !!v || 'El nombre es requerido'],
         precio: [
           (v:string) => !!v || 'El precio es requerido',
-          (v:number) => v > 0 || 'El precio debe ser positivo'
+          (v:number) => v > 0 || 'El precio debe ser positivo',
+          (v:string) => v.length <= 4 || 'Deben ser 3 dígitos'
+
         ],
         stock: [
           (v:string) => !!v || 'El stock es requerido',
           (v:number) => v > 0 || 'El stock debe ser positivo',
+          (v:string) => v.length <= 3 || 'Deben ser 3 dígitos',
           (v:number) => v % 1 == 0 || 'El stock debe ser entero'
         ],
       }
