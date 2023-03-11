@@ -34,11 +34,11 @@
             required
           ></v-text-field>
           
-          <v-select
+          <!-- <v-select
             v-model="platoActual.medida"
             :items="['plato','vaso','porcion']"
             label="Unidad"
-          ></v-select>
+          ></v-select> -->
 
           <v-select
             v-model="platoActual.tipo"
@@ -90,10 +90,13 @@ export default Vue.extend({
       cargando: false,
       datosValidos: false,
       rules:{
-        nombre: [(v:string) => !!v || 'Es requerido'],
+        nombre: [(v:string) => !!v || 'Es requerido',
+        (v:string) => v.length <= 35 || 'Solo se permiten 35 caracteres' 
+        ],
         precio: [
           (v:string) => !!v || 'El precio es requerido',
-          (v:number) => v > 0 || 'El precio debe ser positivo'
+          (v:number) => v > 0 || 'El precio debe ser positivo',
+          (v:string) => v.length <= 5 || 'Deben ser 4 dígitos'
         ]
       }
     }
