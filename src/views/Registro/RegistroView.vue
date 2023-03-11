@@ -15,14 +15,14 @@
               <v-text-field
                 label="Nombre"
                 v-model="usuario.nombre"
-                :rules="[v => !!v || 'El nombre es requerido']"
-                required
+                :rules="rules.nombreRules"
+e                required
               ></v-text-field>
 
               <v-text-field
                 label="Apellido"
                 v-model="usuario.apellido"
-                :rules="[v => !!v || 'El apellido es requerido']"
+                :rules="rules.apellidoRules"
                 required
               ></v-text-field>
 
@@ -44,7 +44,7 @@
 
               <v-select
                 v-model="usuario.rol"
-                :items="['cliente','administrador']"
+                :items="['cliente']"
                 label="Rol"
               ></v-select>
               
@@ -67,6 +67,7 @@
               ></v-text-field>
 
               <v-btn 
+                on:click="sweetAlert"
                 class="white--text" 
                 large block rounded 
                 type="submit"
@@ -84,9 +85,11 @@
 </template>
 
 <script lang="ts">
+import vuetify from '@/plugins/vuetify';
 import Vue from 'vue'
 import {mapActions, mapGetters} from 'vuex'
 import ErrorScnackbar from '../../components/ErrorSnackbar.vue';
+
 
 export default Vue.extend({
   components: { ErrorScnackbar },
@@ -105,7 +108,18 @@ export default Vue.extend({
       show:false,
       cargando: false,
       datosValidos: false,
+      
       rules:{
+        nombreRules:[
+          (v:string) => !!v || 'El nombre es requerido',
+          (v:string) => /^[A-z]+$/.test(v) || 'Solo se permiten caracteres',
+          (v:string) => v.length <= 10 || 'Solo se permiten 10 caracteres' 
+        ],
+        apellidoRules:[
+          (v:string) => !!v || 'El apellido es requerido',
+          (v:string) => /^[A-z]+$/.test(v) || 'Solo se permiten caracteres',
+          (v:string) => v.length <= 10 || 'Solo se permiten 10 caracteres' 
+        ],
         emailRules:[
           (v:string) => !!v || 'El email requerido',
           (v:string) => /.+@.+\..+/.test(v) || 'El email debe ser valido',
@@ -115,6 +129,7 @@ export default Vue.extend({
           (v:string) => v.length >= 8 || 'Mínimo 8 caracteres'
         ],
         telefonoRules:[
+          
           (v:string) => !!v || 'El teléfono es requerido',
           (v:string) => v.length == 10 || 'Deben ser 10 dígitos'
         ]
@@ -122,13 +137,30 @@ export default Vue.extend({
     }
   },
   methods:{
+    sweetAlert() {
+      this.$swal({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+     })
+        },
     ...mapActions('moduloUsuario',['registrar']),
     ...mapActions('moduloError',['restablecerError']),
     async procesar(){
       this.cargando = true;
       await this.registrar(this.usuario);
       this.cargando = false;
+      this.$swal({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1500
+})
     },
+   
     obtenerArchivo(archivo:File | null){
       this.usuario.foto = archivo as any;
     },
